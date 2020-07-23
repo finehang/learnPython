@@ -1,8 +1,8 @@
 class Solution:
     def minPathSum(self, grid:list) -> int:
-        ncol = len(grid)  # 获取矩阵列数
-        nrow = len(grid[0])  # 获取矩阵行数
-        dp = [[0] * nrow for i in range(ncol)]  # 生成和原矩阵同阶的临时矩阵dp
+        nrow = len(grid)  # 获取矩阵列数
+        ncol = len(grid[0])  # 获取矩阵行数
+        dp = [[0] * ncol for i in range(nrow)]  # 生成和原矩阵同阶的临时矩阵dp  尤其注意行与列,不要取反
         dp[0][0] = grid[0][0]
         for i in range(1,nrow):
             dp[i][0] = dp[i-1][0] + grid[i][0]
@@ -17,6 +17,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    grid = [[1, 3, 1], [1, 5, 1], [4, 2, 1]]
+    grid = [[1, 3, 1], [1, 5, 1], [4, 2, 1], [4, 2, 1]]
     s = Solution()
     print(s.minPathSum(grid))
