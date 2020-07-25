@@ -466,4 +466,3 @@ General Options:
                               Don't periodically check PyPI to determine whether a new version of pip is available for
                               download. Implied with --no-index.
 ```
-
