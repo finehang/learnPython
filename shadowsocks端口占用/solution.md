@@ -8,14 +8,18 @@
 
 打开Powershell,查看端口占用,并搜索1080
 
-```netstat -aon|findstr “1080”```
+```{powershell}
+netstat -aon|findstr “1080”
+```
 
 但是,并没有
 ![1080端口无结果](powershell_1.png)
 
 查看系统保留端口发现
 
-```netsh interface ipv4 show excludedportrange protocol=tcp```
+```{powershell}
+netsh interface ipv4 show excludedportrange protocol=tcp
+```
 
 ![查看系统保留窗口](port.png)
 
@@ -25,7 +29,9 @@
 
 打开小飞机的配置文件
 
-```gui-config.json```
+```
+gui-config.json
+```
 
 更换一个保留端口之外的新端口
 
