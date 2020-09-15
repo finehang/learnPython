@@ -22,7 +22,7 @@ dummyX = vec.fit_transform(feature).toarray() # 变量转换
 dummyY = lb.fit_transform(label)
 
 # 建模
-clf = tree.DecisionTreeClassifier(criterion="entropy") # 决策树分类模型
+clf = tree.DecisionTreeClassifier(criterion="entropy") # 决策树分类模型对象
 mod = clf.fit(dummyX, dummyY)
 
 # 导出文件
